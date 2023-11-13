@@ -14,7 +14,7 @@ The configuration files for my Linux desktop.
 
 # Installation
 
-> ⚠️ &nbsp; Cone the repo and substitute the folders. I recommend to create backups of what you modify, so that you don't lose your configurations if something goes wrong
+> ⚠️ &nbsp; Clone the repo and substitute the folders. I recommend to create backups of what you modify, so that you don't lose your configurations if something goes wrong
 
 # Showcase
 
