@@ -1,4 +1,4 @@
-# .dotfiles
+# The dots for my """rice"""
 ⚠️ &nbsp; PLEASE READ THIS!
 
 The most important packages are:
