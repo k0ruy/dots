@@ -8,31 +8,14 @@ I include weather using OpenWeatherMap API. If you want to use it you will have 
 Below I put an image of the updated desktop.
 
 *Empty desktop with my modified coinfiguration:*
-![image](https://user-images.githubusercontent.com/71659265/235355427-4f31a84c-0ca9-4e52-a9df-a48128fc34e0.png)
+![Screenshot_2023-11-13_20-32-31](https://github.com/k0ruy/dots/assets/71659265/9c213347-3fce-4ced-8c75-13c22e5aab73)
 
-The configuration files for my Linux desktop.  Supports Arch based distros using Gnome and/or i3. 
+
+The configuration files for my Linux desktop.
 
 # Installation
 
-> ⚠️ &nbsp; Sadly you will have to do this manually:
-
-```bash
-# Clone.
-sudo pacman -S git
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-mkdir ~/.dotfiles
-config clone --bare https://github.com/k0ruy/.dotfiles ~/.dotfiles/
-config checkout -f
-
-find ~/.scripts/install/ -type f -iname "*.sh" -exec chmod +x {} \;
-
-# Run main install script.
-~/.scripts/install/install.sh
-```
-
-# Theme
-
-The theme is based on my Neovim plugin, [nordic.nvim](https://github.com/AlexvZyl/nordic.nvim).  It is a warmer and darker version of the [Nord](https://www.nordtheme.com/) color palette.
+> ⚠️ &nbsp; Cone the repo and substitute the folders. I recommend to create backups of what you modify, so that you don't lose your configurations if something goes wrong
 
 # Showcase
 
@@ -44,17 +27,7 @@ Some screenshots showing off the desktop and rice.
 
 </br>
 
-Wallpapers can be found at [this ImageGoNord repo](https://github.com/linuxdotexe/nordic-wallpapers) (they "norded" some nice wallpapers) and [locally](https://github.com/AlexvZyl/.dotfiles/tree/main/.wallpapers).
-
-
-*Notifications via [dunst](https://github.com/dunst-project/dunst):*
-![image](https://user-images.githubusercontent.com/71659265/235106355-a28a93b4-d816-47e2-af53-dc28664d6d8e.png)
-
-*Launcher via [rofi](https://github.com/adi1090x/rofi) (cant screenshot on my setup, this is the original image from AlexvZyl):*
-![image](https://user-images.githubusercontent.com/81622310/211895894-663f3480-d2d9-4546-8f1b-04217cb2dd75.png)
-
-*Powermenu via [rofi](https://github.com/adi1090x/rofi) (cant screenshot on my setup, this is the original image from AlexvZyl):*
-![image](https://user-images.githubusercontent.com/81622310/211911407-050741e9-d7d7-412c-ac12-044f002e8b6f.png)
+Wallpapers can be found at [this ImageGoNord repo](https://github.com/linuxdotexe/nordic-wallpapers) (they "norded" some nice wallpapers) and [locally](https://github.com/k0ruy/dots/tree/main/wallpapers).
 
 </details>
 
@@ -62,7 +35,7 @@ Wallpapers can be found at [this ImageGoNord repo](https://github.com/linuxdotex
 
 A few notes on the bindings:
 
-- Keys combined with the `Super` key are reserved for OS and WM related actions.  
+- Keys combined with the `Super` key are reserved for OS and WM-related actions.  
 - Arrows and `hjkl` keys are interchangeable.
 
 <details>
@@ -73,28 +46,23 @@ A few notes on the bindings:
 
 |  Binding  |  Action   |
 | :-------: | :-------: |
-| Super + d | App launcher |
-| Super + p | Powermenu |
+| Super + d | File manager |
 | Super + t | Terminal |
 | Super + n | Neovim |
 | Super + b | BTop++ |
-| Super + g | NVtop |
-| Super + R | Toggle read mode |
-| Super + tab | Windows |
 | Super + Arrow | Cycle windows |
-| Super + Shift + Arrow | Move window |
+| Super + Shift + Arrow | Move window between workspaces |
 | Super + Number | Go to workspace |
-| Super + r | Newsboat |
-| Super + w | iwctl |
+| Super + w | Web browser |
 
 </details>
 
 # Neovim Config
 
-This [config](https://github.com/AlexvZyl/.dotfiles/tree/main/.config/nvim) has a decent amount of work and is basically a fully fledged IDE.  Why didn't I use [LunarVim](https://github.com/LunarVim/LunarVim), [NvChad](https://github.com/NvChad/NvChad) or [SpaceVim](https://github.com/liuchengxu/space-vim)?  I like doing things myself.
+This [config](https://github.com/AlexvZyl/.dotfiles/tree/main/.config/nvim) has a decent amount of work and is basically a fully fledged IDE. I changed a couple of things in my config and to configure neovim ***in theory*** should be enough to open `nvim` in a terminal and running `:PackerSync`. Be sure to have the latest version of nvim and not the one installed by the package manager.
 
-To configure neovim ***in theory*** should be enough to open `nvim` in a terminal and running `:PackerSync`.
+*Desktop with my terminal, nvim and btop open:*
+![Screenshot_2023-11-13_20-31-40](https://github.com/k0ruy/dots/assets/71659265/61267048-9eac-4b7b-8679-93a392118ba3)
 
 > ℹ️ &nbsp; I try to keep all of the key bindings in [this file](https://github.com/AlexvZyl/.dotfiles/blob/main/.config/nvim/lua/alex/key-bindings.lua).
 
-![image](https://user-images.githubusercontent.com/81622310/233982609-f9c15e39-da60-43d8-8c5c-4761db95ad9d.png)
