@@ -2,25 +2,9 @@
 ⚠️ &nbsp; PLEASE READ THIS!
 
 The most important packages are:
-`pfetch btop cronie exa feh git github-cli neovim nvim-packer pulseaudio ttf-jetbrains-mono-nerd`
+`pfetch btop exa feh git github-cli gh neovim nvim-packer pulseaudio ttf-jetbrains-mono-nerd`
 
-Since the original uses a loadshedding file, and where I live there isn't loadshedding, I opted to include weather using OpenWeatherMap API. If you want to use it you will have to create an account and ask for an API key, then substitute the key inside the `~/.config/polybar/scripts/weather.py` file, making sure to change your city of interest too (change it also in the `update_weather.py` file in the same directory).
-
-In the bottom bar I changed the internet settings, since I dont have Wi-Fi on my desktop I changed to work with wired.
-
-To make the gpu info work (BTW I have a radeon one, so maybe this is not for you) you have to add this line `<yourUsername> ALL=NOPASSWD: /usr/bin/cat, /usr/bin/s-tui` to your `/etc/sudoers.d/myOverrides` (it's probably named in another way), using the command `sudo visudo -f /etc/sudoers.d/myOverrides`. I know this isnt really secure, but is allowing just to run the cat command without password.
-
-⚠️ &nbsp; YOU MUST ADD THIS LINES BEFORE STARTING THE POLYBAR `launch.sh`, otherwise your system will try to access sudo commands without password, locking it for some minutes. Ask me how I know... :facepalm:
-
-basically your file inside `/etc/sudoers.d/myOverrides` should contain this:
-```txt
-<yourUsername> ALL=(ALL:ALL) ALL
-<yourUsername> ALL=(ALL:ALL) NOPASSWD: /usr/bin/cat, /usr/bin/s-tui
-```
-*Source: https://askubuntu.com/questions/504652/adding-nopasswd-in-etc-sudoers-doesnt-work*
-
-Polybar Spotify player: https://github.com/mihirlad55/polybar-spotify-module
-
+I include weather using OpenWeatherMap API. If you want to use it you will have to create an account and ask for an API key, then substitute the key inside the `~/scripts/weather.py` file.
 Below I put an image of the updated desktop.
 
 *Empty desktop with my modified coinfiguration:*
