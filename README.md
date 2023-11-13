@@ -1,11 +1,8 @@
 # .dotfiles
 ⚠️ &nbsp; PLEASE READ THIS!
 
-This fork is a modified version to work for my needs, i encountered problems while installing and using the original one, so this is how I modified them.
-
-I suggest to install `yay` (https://www.makeuseof.com/install-and-use-yay-arch-linux/) to install packages that are not available with pacman 
-the most important packages are:
-`fish pfetch betterlockscreen btop cronie dunst exa feh git github-cli neovim nvim-packer picom polybar powertop pulseaudio rofi reflector rsync tlp ttf-jetbrains-mono-nerd rustup cargo `
+The most important packages are:
+`pfetch btop cronie exa feh git github-cli neovim nvim-packer pulseaudio ttf-jetbrains-mono-nerd`
 
 Since the original uses a loadshedding file, and where I live there isn't loadshedding, I opted to include weather using OpenWeatherMap API. If you want to use it you will have to create an account and ask for an API key, then substitute the key inside the `~/.config/polybar/scripts/weather.py` file, making sure to change your city of interest too (change it also in the `update_weather.py` file in the same directory).
 
