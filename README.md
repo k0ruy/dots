@@ -1,6 +1,11 @@
 # The dots for my """rice"""
 ⚠️ &nbsp; PLEASE READ THIS!
 
+*** THIS IS SUPER IMPORTANT ***
+-> You have to add a line inside your sudoers file to allow the syncing of the installed repos without password. To do this add
+`%yourusername% ALL=NOPASSWD: /usr/bin/apt update`, replacing `%yourusername%` with your actual username. *ik this is not really a safe thing to do but it is allowing just the syncing, not really installing stuff or any other.*
+By doing this the panel genmon plugin can automatically show the number of updates, and by clicking on the icon you can upgrade them.
+
 The most important packages are:
 `pfetch btop exa feh git github-cli gh neovim nvim-packer pulseaudio ttf-jetbrains-mono-nerd`
 
