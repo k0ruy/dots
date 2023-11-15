@@ -1,5 +1,5 @@
 # The dots for my """rice"""
-⚠️ &nbsp; PLEASE READ THIS!
+⚠️ &nbsp; PLEASE READ THIS! this customization really was inspired a lot by https://github.com/AlexvZyl/.dotfiles, so many config files are similar and also the overall look.
 
 ***THIS IS SUPER IMPORTANT***
 ----------------------------------------
