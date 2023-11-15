@@ -15,10 +15,10 @@ I include weather using OpenWeatherMap API. If you want to use it you will have 
 Below I put an image of the updated desktop.
 
 *Desktop with my terminal, nvim and btop open:*
-![Screenshot_2023-11-13_20-31-40](https://github.com/k0ruy/dots/assets/71659265/ac638bc5-1465-4606-afe6-0fbc94f6d7f7)
+![Screenshot_2023-11-13_20-31-40](https://github.com/k0ruy/dots/assets/71659265/5c04fca6-8657-4255-9d7a-6bd2a94351dc)
 
 *Empty desktop with my modified coinfiguration:*
-![Screenshot_2023-11-13_20-32-31](https://github.com/k0ruy/dots/assets/71659265/d1cb441e-c30e-4463-a3bb-66cd19a29b65)
+![Screenshot_2023-11-13_20-32-31](https://github.com/k0ruy/dots/assets/71659265/464d0b56-8727-43bd-a593-a7015a443ef0)
 
 <details>
 
