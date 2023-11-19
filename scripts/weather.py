@@ -2,6 +2,7 @@ import requests
 import datetime
 
 # Replace YOUR_API_KEY with your actual API key from OpenWeatherMap
+# "e275251187aeb500b1ccfac1e171e6db111"
 api_key = "key"
 city = "Novaggio"
 
@@ -86,7 +87,7 @@ if response.status_code == 200:
         
     #  Wind: {wind_direction_cardinal} {wind_speed} m/s
     # Print the weather information
-    print(f"{icon} {temperature:.1f}°C, {sun_icon} {sun_time.strftime('%H:%M')}")
+    print(f"{icon} {temperature:.1f}°C, {sun_icon} {sun_time.strftime('%H:%M')}, {wind_direction_cardinal} {wind_speed} m/s")
 else:
     # Print an error message if the request was unsuccessful
     print("Error fetching weather data")

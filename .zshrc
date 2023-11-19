@@ -39,7 +39,7 @@ esac
 export ZSH="$HOME/.oh-my-zsh"
 
 # pfetch customization
-export PF_ASCII="openbsd"
+export PF_ASCII="arch"
 export PF_INFO="ascii os host kernel uptime pkgs memory de palette"
 
 # bat customization
