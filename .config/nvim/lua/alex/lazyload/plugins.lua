@@ -192,11 +192,12 @@ return {
     {
         'folke/tokyonight.nvim',
         priority = 1000,
-        lazy = false,
+        lazy = true,
         config = function() require 'alex.themes.tokyonight' end,
     },
 
     -- Nice themes
+	{ 'ellisonleao/gruvbox.nvim', priority = 1000 , lazy = false}
     --{ 'sainnhe/gruvbox-material', lazy = true },
     --{ 'EdenEast/nightfox.nvim', lazy = true },
     --{ 'catppuccin/nvim', lazy = true },

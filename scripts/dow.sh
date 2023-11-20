@@ -4,7 +4,7 @@ day_of_week=$(date +"%A")
 # Get the current date and time
 current_datetime=$(date '+%Y-%m-%d %H:%M:%S')
 
-COLOR='\u001b[34;1m' # Color \e[0;93m is yellow, \u001b[34;1m is blue
+COLOR='\e[38;2;169;188;225m' # Color \e[0;93m is yellow, \u001b[34;1m is blue
 RESET='\e[0m'  # Reset (to default color)
 
 # Define ASCII art for each day of the week
