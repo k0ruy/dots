@@ -14,11 +14,11 @@ The most important packages are:
 I include weather using OpenWeatherMap API. If you want to use it you will have to create an account and ask for an API key, then substitute the key inside the `~/scripts/weather.py` file.
 Below I put an image of the updated desktop.
 
-*Desktop with my terminal, nvim and btop open:*
-![Screenshot_2023-11-13_20-31-40](https://github.com/k0ruy/dots/assets/71659265/5c04fca6-8657-4255-9d7a-6bd2a94351dc)
+*Desktop with my terminal, nvim, btop++ and dmenu open:*
+![image](https://github.com/k0ruy/dots/assets/71659265/62bdb313-0644-431e-a2ce-5283d6f7174e)
 
 *Empty desktop with my modified coinfiguration:*
-![Screenshot_2023-11-13_20-32-31](https://github.com/k0ruy/dots/assets/71659265/464d0b56-8727-43bd-a593-a7015a443ef0)
+![image](https://github.com/k0ruy/dots/assets/71659265/d44def26-9d66-41dc-9b3e-8ce51fcb5c38)
 
 <details>
 
