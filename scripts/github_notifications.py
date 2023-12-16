@@ -12,10 +12,14 @@ try:
     # Define the command to run on click.
     click_command = "google-chrome --new-window https://github.com/notifications"
     # Generate XML output.
-    xml_output = f"<txt>  {count}</txt><txtclick>{click_command}</txtclick>"
-    print(xml_output)
+    xml_txt = f"<txt>  {count}</txt><txtclick>{click_command}</txtclick>"
+    xml_tool = "<tool>Click to open in web browser</tool>"
+    print(xml_txt)
+    print(xml_tool)
 
 # Could not connect.
 except(json.JSONDecodeError):
-    xml_output2 = f"<txt>󰅤 </txt>"
-    print(xml_output2)
+    xml_txt_2 = f"<txt>󰅤 </txt>"
+    xml_tool_2 = "<tool>Cannot establish connection</tool>"
+    print(xml_txt_2)
+    print(xml_tool_2)

@@ -3,7 +3,7 @@ import datetime
 
 # Replace YOUR_API_KEY with your actual API key from OpenWeatherMap
 # "e275251187aeb500b1ccfac1e171e6db111"
-api_key = "key"
+api_key = "e275251187aeb500b1ccfac1e171e6db"
 city = "Novaggio"
 
 # Set the URL for the OpenWeatherMap API to fetch the current weather in Lugano
@@ -18,7 +18,7 @@ icons = {
     "Thunderstorm": " ",
     "Snow": " ",
     "Mist": "󰖑 ",
-    "NightClear": " ",
+    "NightClear": "",
     "NightClouds": " ",
     "NightRain": " ",
     "NightSnow": " ",
@@ -85,9 +85,54 @@ if response.status_code == 200:
     elif 292.5 < wind_direction_degrees <= 337.5:
         wind_direction_cardinal = "󰧄"
         
-    #  Wind: {wind_direction_cardinal} {wind_speed} m/s
+    
+    
+################ FORECAST
+latitude = 44.34
+longitude = 10.99
+
+forecast_url = f"http://api.openweathermap.org/data/2.5/forecast?lat={latitude}&lon={longitude}&units=metric&appid={api_key}"
+
+# Make a request to the API
+response_forecast = requests.get(forecast_url)
+
+# Check if the response was successful (i.e., has a status code of 200)
+if response_forecast.status_code == 200:
+    # Parse the JSON data from the response
+    data = response_forecast.json()
+    forecast_list = data.get("list", [])
+
+    # Select only every 24th entry to get a 5-day forecast
+    daily_forecasts = forecast_list[::8]
+
+    # Construct a formatted string for the 5-day forecast
+    forecast_text = ""
+    for i, forecast in enumerate(daily_forecasts):
+            dt_txt = forecast.get("dt_txt", "")
+            date = datetime.datetime.strptime(dt_txt, "%Y-%m-%d %H:%M:%S").date()
+
+            # Check if the date is today or tomorrow
+            if i == 0:
+                day_name = "Today"
+            elif i == 1:
+                day_name = "Tomorrow"
+            else:
+                day_name = date.strftime("%A")
+
+            # Extract temperature data
+            temp_min = forecast["main"]["temp_min"]
+            temp_max = forecast["main"]["temp_max"]
+            weather_description = forecast.get("weather", [{}])[0].get("description", "")
+            forecast_text += f"\n{day_name}: Min {temp_min}°C, Max {temp_max}°C, {weather_description}"
+
+
+    # Construct the XML output with the 5-day forecast
+    xml_tool = f"<tool>5 Days weather forecast:\n{forecast_text}</tool>"
+    
     # Print the weather information
-    print(f"{icon} {temperature:.1f}°C, {sun_icon} {sun_time.strftime('%H:%M')}, {wind_direction_cardinal} {wind_speed} m/s")
+    xml_out = f"<txt>{icon} {temperature:.1f}°C, {sun_icon} {sun_time.strftime('%H:%M')}, {wind_direction_cardinal} {wind_speed} m/s</txt>"
+    print(xml_out)
+    print(xml_tool)
 else:
     # Print an error message if the request was unsuccessful
     print("Error fetching weather data")

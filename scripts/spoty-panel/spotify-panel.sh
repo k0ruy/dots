@@ -33,7 +33,7 @@ if pidof spotify &> /dev/null; then
 	# echo "DEBUG: After sp.sh eval, SPOTIFY_TITLE = $SPOTIFY_TITLE" >> ~/debug.log # Debug statement
 
 	# grab window id 
-	WINDOW_ID=$(wmctrl -l | grep "${SPOTIFY_ARTIST} - ${SPOTIFY_TITLE}\|Spotify" | awk '{print $1}')
+	WINDOW_ID=$(wmctrl -l | grep "${SPOTIFY_ARTIST} - ${SPOTIFY_TITLE}" | awk '{print $1}')
     
 	# trim the title
 	MAX_LENGTH=20
@@ -44,8 +44,8 @@ if pidof spotify &> /dev/null; then
 
 
 	echo "<img>${ICON}</img>"
-	echo "<txt>$(encode ${SPOTIFY_ARTIST}) - $(encode ${DISPLAY_TITLE})</txt>"
-	echo "<click>xdotool windowactivate ${WINDOW_ID}</click>"
+	echo "<txt> $(encode ${SPOTIFY_ARTIST}) - $(encode ${DISPLAY_TITLE})</txt>"
+	echo "<txtclick>xdotool windowactivate ${WINDOW_ID}</txtclick>"
 	echo "<tool>Title:      $(encode ${SPOTIFY_TITLE})"
 	echo "Artist:     $(encode ${SPOTIFY_ARTIST})"
 	echo "Album:   $(encode ${SPOTIFY_ALBUM})</tool>"

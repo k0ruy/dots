@@ -18,10 +18,12 @@ upgradable = subprocess.run(command, stdout=subprocess.PIPE, stderr=subprocess.D
 update_count = int(len(upgradable.splitlines()) - 1)
 
 # Define the command to run on click.
-click_command = "kitty --execute sudo apt upgrade -y"
+click_command = "kitty --execute sudo apt upgrade"
 
 # Generate XML output.
-xml_output = f"<txt>  {update_count}</txt><txtclick>{click_command}</txtclick>"
+xml_txt = f"<txt>  {update_count}</txt><txtclick>{click_command}</txtclick>"
+xml_tool = "<tool> Click to update system</tool>"
 
 # Print XML output.
-print(xml_output)
+print(xml_txt)
+print(xml_tool)
