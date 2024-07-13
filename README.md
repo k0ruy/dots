@@ -1,5 +1,9 @@
 # The dots for my """rice"""
-⚠️ &nbsp; PLEASE READ THIS! this customization really was inspired a lot by https://github.com/AlexvZyl/.dotfiles, so many config files are similar and also the overall look.
+⚠️ &nbsp; PLEASE READ THIS! this customization really was inspired a lot by https://github.com/AlexvZyl/.dotfiles, so many config files are similar and also the overall look. 
+
+I have an AMD graphics card, so i use radeontop for getting the GPU data. 
+The Nvim configuration works for NvChad.
+I include weather using OpenWeatherMap API. If you want to use it you will have to create an account and ask for an API key, then substitute the key inside the `~/scripts/weather.py` file.
 
 ***THIS IS SUPER IMPORTANT***
 ----------------------------------------
@@ -13,10 +17,7 @@ By doing this the panel genmon plugin can automatically show the number of updat
 ----------------------------------------
 
 The most important packages are:
-`pfetch xfce4-genmon-plugin kitty btop exa spotify zsh oh-my-zsh git github-cli gh neovim nvim-packer pulseaudio ttf-jetbrains-mono-nerd` (some are to be installed via GitHub)
-
-I include weather using OpenWeatherMap API. If you want to use it you will have to create an account and ask for an API key, then substitute the key inside the `~/scripts/weather.py` file.
-Below I put an image of the updated desktop.
+`cowsay xfce4-genmon-plugin kitty btop exa spotifyctl zsh oh-my-zsh git github-cli gh neovim nvim ttf-jetbrains-mono-nerd` (some are to be installed via GitHub)
 
 *Desktop with nvim and btop++ open:*
 ![desktop](https://github.com/user-attachments/assets/dffaf98a-92e1-412e-9e4e-e0c3b8d4e751)
