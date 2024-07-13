@@ -1,5 +1,0 @@
-Dmenu that looks like rofi.
-**** Patches
-+ Center
-+ Grid
-+ Border
