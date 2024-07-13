@@ -1,58 +1,14 @@
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$PATH:/opt/miniforge3/bin
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# find which day of week is it
-source ~/scripts/dow.sh
-
-
-# Display ASCII art based on the day of the week
-case "$day_of_week" in
-    "Monday")
-        echo "$monday_art"
-        ;;
-    "Tuesday")
-        echo "$tuesday_art"
-        ;;
-    "Wednesday")
-        echo "$wednesday_art"
-        ;;
-    "Thursday")
-        echo "$thursday_art"
-        ;;
-    "Friday")
-        echo "$friday_art"
-        ;;
-    "Saturday")
-        echo "$saturday_art"
-        ;;
-    "Sunday")
-        echo "$sunday_art"
-        ;;
-    *)
-        echo "Welcome!"
-        ;;
-esac
-
-
-# Path to your oh-my-zsh installation.
+# Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-# pfetch customization
-export PF_ASCII="arch"
-export PF_INFO="ascii os host kernel uptime pkgs memory de palette"
-
-# bat customization
-export BAT_THEME="gruvbox-dark"
-
-# run pfetch
-pfetch
-
 # Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
+# load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="lambda-mod"
+# ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -115,12 +71,8 @@ ZSH_THEME="lambda-mod"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-# syntax highlighting themes
-# source ~/.zsh/catppuccin_mocha-zsh-syntax-highlighting.zsh # catpuccino
-source ~/.zsh/zsh-syntax-highlighting.zsh # dracula
-
 plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
-
+source /home/ko4/.oh-my-zsh/custom/plugins/syntax-highlighters-themes/dracula/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -140,13 +92,24 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# Set personal aliases, overriding those provided by Oh My Zsh libs,
+# plugins, and themes. Aliases can be placed here, though Oh My Zsh
+# users are encouraged to define aliases within a top-level file in
+# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
+# - $ZSH_CUSTOM/aliases.zsh
+# - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Aliases are defined inside ~/.oh-my-zsh/custom/aliases.zsh
 
+
+
+#################################################################################################
+#					CONDA
+#################################################################################################
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/ko4/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
@@ -160,9 +123,20 @@ else
     fi
 fi
 unset __conda_setup
-
-if [ -f "/home/ko4/miniforge3/etc/profile.d/mamba.sh" ]; then
-    . "/home/ko4/miniforge3/etc/profile.d/mamba.sh"
-fi
 # <<< conda initialize <<<
+
+
+
+#################################################################################################
+#					CUSTOMIZATIONS
+#################################################################################################
+
+# intro
+echo "lmao im in a terminal" | cowthink -s -f three-eyes
+
+# starship
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+
+
 

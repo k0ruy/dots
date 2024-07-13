@@ -30,7 +30,7 @@
     height = 300
 
     # Position the notification in the top right corner
-    origin = bottom-right
+    origin = top-right
 
     # Offset from the origin
     offset = 6x30
@@ -195,7 +195,7 @@
 
     # Paths to default icons.
     #icon_path = /usr/share/icons/gnome/16x16/status/:/usr/share/icons/gnome/16x16/devices/
-    icon_path = /usr/share/icons/Qogir/16/status:/usr/share/icons/Qogir/16/devices/:/usr/share/icons/Qogir/16/apps/:/usr/share/pixmaps/
+    icon_path = /usr/share/icons/Adwaita/16x16/status:/usr/share/icons/Adwaita/16x16/devices/:/usr/share/icons/Adwaita/16x16/apps/:/usr/share/pixmaps/
 
     ### History ###
 
@@ -408,7 +408,7 @@
 #    urgency = normal
 #
 [stack-volumes]
-    appname = "some_volume_notifiers"
+    appname = "spotity"
     set_stack_tag = "volume"
 
 [flameshot-urgency]

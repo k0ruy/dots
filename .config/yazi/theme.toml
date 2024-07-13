@@ -1,0 +1,5 @@
+# A TOML linter such as https://taplo.tamasfe.dev/ can use this schema to validate your config.
+
+[flavor]
+use = "catppuccin-macchiato"
+
