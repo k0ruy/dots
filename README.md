@@ -17,9 +17,6 @@ Below I put an image of the updated desktop.
 *Desktop with my terminal, nvim, btop++ and dmenu open:*
 ![image](https://github.com/k0ruy/dots/assets/71659265/62bdb313-0644-431e-a2ce-5283d6f7174e)
 
-*Empty desktop with my modified coinfiguration:*
-![image](https://github.com/k0ruy/dots/assets/71659265/d44def26-9d66-41dc-9b3e-8ce51fcb5c38)
-
 <details>
 
 <summary>Overview</summary>
