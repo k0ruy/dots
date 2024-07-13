@@ -1,6 +1,6 @@
 # The dots for my """rice"""
 ⚠️ &nbsp; PLEASE READ THIS! this customization really was inspired a lot by https://github.com/AlexvZyl/.dotfiles, so many config files are similar and also the overall look. 
-
+Wallpaper in the image is `wallpapers/greencar.jpg`.
 I have an AMD graphics card, so i use radeontop for getting the GPU data. 
 The Nvim configuration works for NvChad.
 I include weather using OpenWeatherMap API. If you want to use it you will have to create an account and ask for an API key, then substitute the key inside the `~/scripts/weather.py` file.
