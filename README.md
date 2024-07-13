@@ -15,7 +15,7 @@ I include weather using OpenWeatherMap API. If you want to use it you will have 
 Below I put an image of the updated desktop.
 
 *Desktop with nvim and btop++ open:*
-![image](![desktop](https://github.com/user-attachments/assets/dffaf98a-92e1-412e-9e4e-e0c3b8d4e751)
+(![desktop](https://github.com/user-attachments/assets/dffaf98a-92e1-412e-9e4e-e0c3b8d4e751)
 
 <details>
 
