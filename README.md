@@ -5,7 +5,7 @@ I have an AMD graphics card, so i use radeontop for getting the GPU data.
 The Nvim configuration works for NvChad.
 I include weather using OpenWeatherMap API. If you want to use it you will have to create an account and ask for an API key, then substitute the key inside the `~/scripts/weather.py` file.
 
-***vvv      THIS IS SUPER IMPORTANT      vvv***
+***THIS IS SUPER IMPORTANT***
 ----------------------------------------
 ⚠️ &nbsp; You have to add a line inside your sudoers file to allow the syncing of the installed repos without password. 
 
