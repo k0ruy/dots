@@ -17,13 +17,6 @@ Below I put an image of the updated desktop.
 *Desktop with nvim and btop++ open:*
 ![desktop](https://github.com/user-attachments/assets/dffaf98a-92e1-412e-9e4e-e0c3b8d4e751)
 
-<details>
-
-<summary>Overview</summary>
-
-</br>
-
-</details>
 
 # Installation
 
