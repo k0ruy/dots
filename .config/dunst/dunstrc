@@ -410,6 +410,11 @@
 [stack-volumes]
     appname = "spotity"
     set_stack_tag = "volume"
+    appname = "xfce4-pulseaudio-plugin"
+
+[teams-for-linux]
+desktop_entry = "teams-for-linux"
+urgency = critical
 
 [flameshot-urgency]
     appname = flameshot
@@ -440,6 +445,7 @@
     timeout = 15
 
 [urgency_critical]
+    
     background = "#191D24"
     foreground = "#c0caf5"
     frame_color = "#db4b4b"

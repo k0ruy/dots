@@ -65,3 +65,9 @@ btop++ needs an interactive shell to run.
 
 2024/07/13 (16:42:41) | ===> btop++ v.1.2.13
 2024/07/13 (16:42:41) | ERROR: Failed to get size of terminal!
+
+2024/07/13 (20:04:03) | ===> btop++ v.1.2.13
+2024/07/13 (20:04:03) | ERROR: Stall in Runner thread, restarting!
+
+2024/07/14 (21:28:19) | ===> btop++ v.1.2.13
+2024/07/14 (21:28:19) | ERROR: Stall in Runner thread, restarting!
