@@ -7,6 +7,8 @@ alias alert='notify-send --urgency=critical -i "$([ $? = 0 ] && echo terminal ||
 alias ls='exa --grid --long --header --no-time --no-permissions --across --icons --git'
 alias la='exa --grid --long --header --no-time --no-permissions --across --icons --git -all'
 
+alias cd=z
+
 # other
 alias grep='grep --color=auto'
 alias cda='conda activate'
@@ -16,6 +18,8 @@ alias md='mkdir'
 alias e='nvim'
 alias se='sudoedit'
 
+# git
+alias glp='git log --all --decorate --graph --oneline'
 
 # configs
 alias ali='$EDITOR $ZSH_CUSTOM/aliases.zsh'

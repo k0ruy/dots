@@ -1,3 +1,41 @@
+#################################################################################################
+#					CONDA
+#################################################################################################
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/ko4/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/ko4/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/ko4/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/ko4/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+
+#################################################################################################
+#					CUSTOMIZATIONS
+#################################################################################################
+
+# intro
+echo "lmao im in a terminal" | cowthink -s -f three-eyes
+
+# starship
+eval "$(starship init zsh)"
+eval "$(zoxide init zsh)"
+
+
+
+#################################################################################################
+#					ZSHRC BEGIN
+#################################################################################################
+
+
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -105,38 +143,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 
-
-
-#################################################################################################
-#					CONDA
-#################################################################################################
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ko4/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/ko4/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/home/ko4/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/ko4/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
-
-#################################################################################################
-#					CUSTOMIZATIONS
-#################################################################################################
-
-# intro
-echo "lmao im in a terminal" | cowthink -s -f three-eyes
-
-# starship
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
 
 
 
