@@ -34,23 +34,31 @@ if pidof spotify &> /dev/null; then
 
 	# grab window id 
 	WINDOW_ID=$(wmctrl -l | grep "${SPOTIFY_ARTIST} - ${SPOTIFY_TITLE}" | awk '{print $1}')
+  WINDOW_ID_not_playing=$(wmctrl -l | grep "Spotify Premium" | awk '{print $1}')
     
 	# trim the title
 	MAX_LENGTH=20
-	DISPLAY_TITLE=$(python3 -c "import sys; title=sys.argv[1]; print(title[:$MAX_LENGTH] + '...' if len(title) > $MAX_LENGTH else title)" "$SPOTIFY_TITLE")
-
+	DISPLAY_INFO=$(python3 -c "import sys; song_info=sys.argv[1]; print(song_info[:10] + '...' + song_info[-10:] if len(song_info) > $MAX_LENGTH else song_info)" "$SPOTIFY_ARTIST - $SPOTIFY_TITLE")
 
 	# echo "DEBUG: After Python truncation, DISPLAY_TITLE = $DISPLAY_TITLE" >> ~/debug.log # Debug statement
 
-
 	echo "<img>${ICON}</img>"
-	echo "<txt> $(encode ${SPOTIFY_ARTIST}) - $(encode ${DISPLAY_TITLE})</txt>"
-	echo "<txtclick>xdotool windowactivate ${WINDOW_ID}</txtclick>"
+	echo "<txt>  $(encode ${DISPLAY_INFO} | awk '{printf "%-22s", $0}')</txt>"
+	
+  # Conditional check for WINDOW_ID and WINDOW_ID_not_playing
+	if [ -n "${WINDOW_ID}" ]; then
+		echo "<txtclick>xdotool windowactivate ${WINDOW_ID}</txtclick>"
+	elif [ -n "${WINDOW_ID_not_playing}" ]; then
+		echo "<txtclick>xdotool windowactivate ${WINDOW_ID_not_playing}</txtclick>"
+	fi
+
 	echo "<tool>Title:      $(encode ${SPOTIFY_TITLE})"
 	echo "Artist:     $(encode ${SPOTIFY_ARTIST})"
 	echo "Album:   $(encode ${SPOTIFY_ALBUM})</tool>"
 else 
 	echo "<img>${ICON_OFFLINE}</img>"
+  echo "<txt> $(echo 'Spotify not running' | awk '{printf "%-22s", $0}')</txt>"
 	echo "<tool>Spotify is not running</tool>"
-	echo "<click>spotify</click>"
+	echo "<txtclick>spotify</txtclick>"
+  echo "<click>spotify</click>"
 fi

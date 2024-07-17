@@ -10,7 +10,7 @@ try:
     json_object = json.loads(result)
     count = len(json_object)
     # Define the command to run on click.
-    click_command = "google-chrome --new-window https://github.com/notifications"
+    click_command = "exo-open --launch WebBrowser https://github.com/notifications"
     # Generate XML output.
     xml_txt = f"<txt>  {count}</txt><txtclick>{click_command}</txtclick>"
     xml_tool = "<tool>Click to open in web browser</tool>"
@@ -23,3 +23,5 @@ except(json.JSONDecodeError):
     xml_tool_2 = "<tool>Cannot establish connection</tool>"
     print(xml_txt_2)
     print(xml_tool_2)
+
+    
