@@ -1,5 +1,5 @@
 # The dots for my """rice"""
-⚠️ &nbsp; PLEASE READ THIS! this customization really was inspired a lot by https://github.com/AlexvZyl/.dotfiles, so many config files are similar and also the overall look. 
+⚠️ &nbsp; PLEASE READ THIS! this customization really was inspired a lot by [https://github.com/AlexvZyl/.dotfiles](https://github.com/AlexvZyl/.dotfiles/tree/archlinux), so many config files are similar and also the overall look. 
 Wallpaper in the image is `wallpapers/greencar.jpg`.
 I have an AMD graphics card, so i use radeontop for getting the GPU data. 
 The Nvim configuration works for NvChad.
