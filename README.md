@@ -10,7 +10,7 @@
 ----------------------------------------
 > [!wARNING]
 > You have to add a line inside your sudoers file to allow the syncing of the installed repos without password. 
-> To do this add `%yourusername% ALL=NOPASSWD: /usr/bin/apt update`, replacing `%yourusername%` with your actual username.
+> To do this add `%yourusername% ALL=(ALL) NOPASSWD: /usr/bin/s-tui, /usr/bin/cat`, replacing `%yourusername%` with your actual username. In all truth there should also be yay for getting the number of pacman updates, but I cant seem to get it working so I removed the genmon in the bottom panel.
 > 
 > *i know this is not really a safe thing to do but it is allowing just the syncing, not really installing stuff or any other.*
 >
@@ -18,10 +18,11 @@
 ----------------------------------------
 
 The most important packages are:
-`cowsay xfce4-genmon-plugin kitty btop exa spotifyctl zsh oh-my-zsh git github-cli gh neovim nvim ttf-jetbrains-mono-nerd` (some are to be installed via GitHub)
+`cowsay xfce4-genmon-plugin kitty dunst rofi yazi btop eza spotifyctl zsh oh-my-zsh git github-cli gh neovim nvim` (some are to be installed via GitHub). Nerd Font is JetBrainsMono Nerd Font.
 
 *Desktop with nvim and btop++ open:*
-![desktop](https://github.com/user-attachments/assets/dffaf98a-92e1-412e-9e4e-e0c3b8d4e751)
+![image](https://github.com/user-attachments/assets/919fbd2c-3721-4152-88a8-b4f4dd9ef362)
+
 
 
 # Installation
