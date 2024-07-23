@@ -13,7 +13,7 @@ alias cd=z
 alias grep='grep --color=auto'
 alias cda='conda activate'
 alias cdd='conda deactivate'
-alias s='sudo apt'
+alias s='sudo pacman'
 alias md='mkdir'
 alias e='nvim'
 alias se='sudoedit'

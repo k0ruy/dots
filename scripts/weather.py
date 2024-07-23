@@ -2,8 +2,8 @@ import requests
 import datetime
 
 # Replace YOUR_API_KEY with your actual API key from OpenWeatherMap
-api_key = "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
-city = "cccccccc"
+api_key = "e275251187aeb500b1ccfac1e171e6db"
+city = "Novaggio"
 
 # Set the URL for the OpenWeatherMap API to fetch the current weather in Lugano
 url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={api_key}"
@@ -145,7 +145,7 @@ if response_forecast.status_code == 200:
     # Construct the XML output with the 5-day forecast
     xml_tool = f"<tool>5 Days weather forecast:\n{forecast_text}</tool>"
 
-    command = "google-chrome --new-window https://www.meteosvizzera.admin.ch/previsioni-locali/curio/6986.html#forecast-tab=detail-view"
+    command = "vivaldi --new-window https://www.meteosvizzera.admin.ch/previsioni-locali/curio/6986.html#forecast-tab=detail-view"
     # Print the weather information
     xml_out = f"<txt>{icon} {temperature:.1f}°C, {sun_icon} {sun_time.strftime('%H:%M')}</txt><txtclick>{command}</txtclick>"
     print(xml_out)

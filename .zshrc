@@ -1,20 +1,3 @@
-#################################################################################################
-#					CONDA
-#################################################################################################
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/ko4/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/ko4/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/home/ko4/miniforge3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/ko4/miniforge3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 
 #################################################################################################
@@ -37,7 +20,7 @@ eval "$(zoxide init zsh)"
 
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -142,7 +125,23 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-
-
+# must be at the end of the file:
+#################################################################################################
+#					CONDA
+#################################################################################################
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/ko4/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/ko4/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/ko4/miniforge3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/ko4/miniforge3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
 
 
