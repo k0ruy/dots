@@ -62,7 +62,6 @@ A few notes on the bindings:
 | Super + Shift + Arrow | Move window between workspaces |
 | Super + Number | Go to workspace |
 | Super + w | Web browser |
-`
 
 > [!NOTE]
 > ...yeah I really like the new MarkDown blockquote function, as you may have noticed ahah.
