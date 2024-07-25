@@ -6,10 +6,12 @@ Some general info:
 * The Nvim configuration works for NvChad.
 * I include weather using OpenWeatherMap API. If you want to use it you will have to create an account and ask for an API key, then substitute the key inside the `~/scripts/weather.py` file.
 * GTK theme is [this](https://www.xfce-look.org/s/XFCE/p/1403328/).
+* `cronie` runs ` ~/scripts/backup.sh` every day at 12:00 and 20:00, and `~/scripts/update_alert.sh` every Friday at 19:00, so if you want add these lines to `crontab -e`: `0 12,20 * * * /home/CHANGEME/scripts/backup.sh >> /home/CHANGEME/scripts/backup_log.txt 2>&1` and `0 19 * * FRI /home/CHANGEME/scripts/update_alert.sh`. Please remember to change the username to yours, and to leave an empty line at the end of the file. Also, chech `cronie` service is up and running, and is enabled (so that it starts with the system).
+
   
 > [!TIP]
 > Install `yay` AUR helper ([how to install yay?](https://itsfoss.com/install-yay-arch-linux/), [yay repo](https://github.com/Jguer/yay)) so that for the packages are not installable by `pacman`.
-> Install these packages for smoother customization, as you will (*should*) have all pieces: `cowsay s-tui radeontop xfce4-genmon-plugin picom kitty dunst rofi yazi btop eza zsh oh-my-zsh git github-cli nvim`.
+> Install these packages for smoother customization, as you will (*should*) have all pieces: `cowsay cronie s-tui radeontop xfce4-genmon-plugin picom kitty dunst rofi yazi btop eza zsh oh-my-zsh git github-cli nvim`.
 > Nerd Font is JetBrainsMono Nerd Font.
 
 > [!NOTE]
