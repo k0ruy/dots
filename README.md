@@ -1,4 +1,4 @@
-# The dots for my """rice"""
+# The dots for my *"rice"*
 > [!NOTE]
 > PLEASE READ THIS! this customization really was inspired a lot by [https://github.com/AlexvZyl/.dotfiles](https://github.com/AlexvZyl/.dotfiles/tree/archlinux), so many config files are similar and also the overall look. 
 > Wallpaper in the image is `wallpapers/greencar.jpg`.
@@ -10,11 +10,11 @@
 ----------------------------------------
 > [!wARNING]
 > You have to add a line inside your sudoers file to allow the syncing of the installed repos without password. 
-> To do this add `%yourusername% ALL=(ALL) NOPASSWD: /usr/bin/s-tui, /usr/bin/cat`, replacing `%yourusername%` with your actual username. In all truth there should also be yay for getting the number of pacman updates, but I cant seem to get it working so I removed the genmon in the bottom panel.
+> To do this add `%yourusername% ALL=(ALL) NOPASSWD: /usr/bin/yay, /usr/bin/s-tui, /usr/bin/cat`, replacing `%yourusername%` with your actual username. I suggest to shut down and turn on the pc to make this work, I found that yay still asks for passwords if you only modify with `sudo visudo` and save it. Once rebooted everything you put in this line shoud work without asking for passwords when using with `sudo`.
 > 
 > *i know this is not really a safe thing to do but it is allowing just the syncing, not really installing stuff or any other.*
 >
-> **By doing this the panel genmon plugin can automatically show the number of updates, and by clicking on the icon you can upgrade them.**
+> **By doing this the panel genmon plugin can automatically show the number of updates, using `yay -Syy` and `yay -Qu`.**
 ----------------------------------------
 
 The most important packages are:
