@@ -5,6 +5,30 @@ config = {}
 config.default_prog = { 'zsh' }
 config.enable_tab_bar = false
 
+config.keys = {
+  {
+    key = 'h',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.SplitHorizontal {
+       domain = 'CurrentPaneDomain' ,
+    },
+  },
+  {
+    key = 'v',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.SplitVertical {
+       domain = 'CurrentPaneDomain' ,
+    },
+  },
+  {
+    key = 'q',
+    mods = 'CTRL',
+    action = wezterm.action.CloseCurrentPane {
+       confirm = false ,
+    },
+  },
+}
+
 config.max_fps = 75
 config.animation_fps = 75
 --config.cursor_blink_ease_in = 'Constant'
@@ -12,10 +36,10 @@ config.animation_fps = 75
 config.initial_cols = 130
 config.initial_rows = 42
 
-config.window_background_opacity = 0.96
+config.window_background_opacity = 0.90
 config.use_resize_increments = true
 
-config.font_size = 11.5
+config.font_size = 10
 config.underline_thickness = 1
 config.underline_position = -4.0
 config.freetype_load_target = "Normal"
