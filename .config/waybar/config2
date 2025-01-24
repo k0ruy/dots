@@ -1,0 +1,136 @@
+{
+  "modules-left": [
+    "custom/launcher",
+    "sway/workspaces",
+    "temperature",
+    "idle_inhibitor",
+    //"mpd",
+    "custom/cava-internal",
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "pulseaudio",
+    "backlight",
+    "memory",
+    "cpu",
+    "network",
+    "battery",
+    "custom/powermenu",
+    "tray"
+  ],
+  "custom/launcher": {
+    "format": " ",
+    "on-click": "~/.config/rofi/launcher/run.sh",
+    "tooltip": false
+  },
+  "custom/cava-internal": {
+    "exec": "~/.config/waybar/Cava.sh",
+    //"exec": "~/.config/waybar/cava-internal.sh",
+    "tooltip": false
+  },
+  "sway/workspaces": {
+    "disable-scroll": true,
+  },
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "format-icons": {
+      "activated": "󰒳",
+      "deactivated": "󰒲"
+    },
+    "tooltip": false
+  },
+  //"backlight": {
+  // "device": "intel_backlight",
+  // "on-scroll-up": "light -A 5",
+  // "on-scroll-down": "light -U 5",
+  // "format": "{icon} {percent}%",
+  // "format-icons": ["","","",""]
+  //},
+  "pulseaudio": {
+    "scroll-step": 1,
+    "format": "{icon} {volume}%", 
+    "format-muted": "  Muted",
+    "format-icons": {
+      "default": ["", "", ""]
+    },
+//    "states": {
+//      "warning": 100,
+//    },
+    "scroll-step": 1,
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+    "tooltip": false,
+  },
+  //"battery": {
+  //  "interval": 10,
+  //  "states": {
+  //    "warning": 20,
+  //    "critical": 10
+  //  },
+  //  "format": "{icon} {capacity}%",
+  //  "format-icons": ["", "", "", "", "", "", "", "", ""],
+  //  "format-full": "{icon} {capacity}%",
+  //  "format-charging": " {capacity}%",
+  //  "tooltip": false
+  //},
+  "clock": {
+    "on-click": "~/.config/waybar/switch_style1.sh &",
+    "on-click-right": "~/.config/waybar/wallpaper_random.sh &",
+    "on-click-middle": "~/.config/waybar/live_wallpaper.sh &",
+    "interval": 1,
+    "format": "{:%H:%M  %A %b %d}",
+    "tooltip": true,
+    /* "tooltip-format": "{:%A, %d %B %Y}\n<tt>{calendar}</tt>" */
+    "tooltip-format": "<tt>{calendar}</tt>",
+  },
+  "memory": {
+    "interval": 1,
+    "format": "  {percentage}%",
+    "states": {
+      "warning": 85,
+    },
+  },
+  "cpu": {
+    "interval": 1,
+    "format": " {usage}%"
+  },
+  //"mpd": {
+  //    "max-length": 25,
+  //    "format": "<span foreground='#bb9af7'></span> {title}",
+  //    "format-paused": " {title}",
+  //    "format-stopped":"<span foreground='#bb9af7'></span>",
+  //    "format-disconnected": "",
+  //    "on-click": "mpc --quiet toggle",
+  //    "on-click-right": "mpc ls | mpc add",
+  //    "on-click-middle": "wezterm ncmpcpp",
+  //    "on-scroll-up": "mpc --quiet prev",
+  //    "on-scroll-down": "mpc --quiet next",
+  //    "smooth-scrolling-threshold":5,
+  //    "tooltip-format": "{title} - {artist} ({elapsedTime:%M:%S}/{totalTime:%H:%M:%S})"
+  //  },
+  "network": {
+    "interval": 1,
+    "format-wifi": "󰤨 {essid}",
+    "format-ethernet": "󰈀  {ifname} ({ipaddr})",
+    "format-linked": "󰤭 {essid} (No IP)",
+    "format-disconnected": "󰤭 Disconnected",
+    "tooltip": false
+  },
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp2_input",
+    //"exec": "sensors | grep "Package id 0" | awk '{print $4}'",
+    //"critical-threshold": 80,
+    "tooltip": false,
+    "format": " {temperatureC}°C"
+  },
+  "custom/powermenu": {
+    "format": " ",
+    "on-click": "~/.config/rofi/powermenu/run.sh",
+    "tooltip": false
+  },
+  "tray": {
+    "icon-size": 15,
+    "spacing": 5
+  },
+}
