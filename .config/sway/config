@@ -108,7 +108,7 @@ smart_borders on
 # Autostart #
 #-----------#
     #exec_always  --no-startup-id  dunst &
-    exec_always  --no-startup-id  mako &
+    exec_always  --no-startup-id  mako --config /home/ko4/GITHUB_REPOS/dots/.config/mako/config &
     exec_always  --no-startup-id  fcitx5 &
     exec_always  --no-startup-id  nm-applet --indicator &
     exec_always  --no-startup-id  ~/.config/waybar/launch_waybar.sh &
