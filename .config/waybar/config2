@@ -3,7 +3,8 @@
     "custom/launcher",
     "sway/workspaces",
     "temperature",
-    "idle_inhibitor",
+    //"idle_inhibitor",
+    "custom/spotify",
     //"mpd",
     "custom/cava-internal",
   ],
@@ -33,6 +34,14 @@
   "sway/workspaces": {
     "disable-scroll": true,
   },
+"custom/spotify": {
+    "exec": "/usr/bin/python3 ~/.config/waybar/spotify.py --player spotify",
+    "format": "{}",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "on-scroll-up": "playerctl next",
+    "on-scroll-down": "playerctl previous"
+},
   "idle_inhibitor": {
     "format": "{icon}",
     "format-icons": {
@@ -75,9 +84,9 @@
   //  "tooltip": false
   //},
   "clock": {
-    "on-click": "~/.config/waybar/switch_style1.sh &",
+    //"on-click": "~/.config/waybar/switch_style1.sh &",
     "on-click-right": "~/.config/waybar/wallpaper_random.sh &",
-    "on-click-middle": "~/.config/waybar/live_wallpaper.sh &",
+    //"on-click-middle": "~/.config/waybar/live_wallpaper.sh &",
     "interval": 1,
     "format": "{:%H:%M  %A %b %d}",
     "tooltip": true,
@@ -118,7 +127,7 @@
     "tooltip": false
   },
   "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon2/temp2_input",
+    "hwmon-path": "/sys/class/hwmon/hwmon4/temp2_input",
     //"exec": "sensors | grep "Package id 0" | awk '{print $4}'",
     //"critical-threshold": 80,
     "tooltip": false,

@@ -32,10 +32,10 @@ exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activati
 
 default_border pixel 3
 default_floating_border pixel 3
-gaps inner  5
-gaps outer  0
-bindsym $mod+shift+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 5 
-bindsym $mod+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 0
+gaps inner 5
+#gaps outer  50
+#bindsym $mod+shift+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 5 
+#bindsym $mod+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 0
 
 # Activate smart borders (always)
 smart_borders on
@@ -46,8 +46,10 @@ smart_borders on
 #------------------------------#
 #swaymsg -t get_tree | grep app_id
     for_window [app_id="pop-up"]                     floating enable
-    for_window [app_id="org.wezfurlong.wezterm"]     floating enable
-    for_window [app_id="nemo"]                       floating enable
+    for_window [app_id="xviewer"]                     floating enable
+    for_window [app_id="com.cisco.secureclient.gui"] floating enable
+    for_window [class="feh"]                         floating enable
+    for_window [app_id="org.pwmt.zathura"]           floating enable
     for_window [app_id="xed"]                        floating enable
     for_window [app_id="bubble"]                     floating enable 
     for_window [app_id="task_dialog"]                floating enable
@@ -60,15 +62,15 @@ smart_borders on
     for_window [app_id="page-info"]                  floating enable	
     for_window [app_id="webconsole"]                 floating enable
     for_window [app_id="Authy"]                      floating enable
-    for_window [app_id="termfloat"]                  floating enable
-    for_window [app_id="termfloat"]                  resize set height 540
-    for_window [app_id="termfloat"]                  resize set width 960
+    for_window [app_id="org.wezfurlong.wezterm"]     floating enable
+    #for_window [app_id="org.wezfurlong.wezterm"]     resize set height 540
+    #for_window [app_id="org.wezfurlong.wezterm"]     resize set width 960
     for_window [app_id="mpv"]                        floating enable 
-    for_window [app_id="mpv"]                        resize set height 540
-    for_window [app_id="mpv"]                        resize set width 960
-    for_window [app_id="Nautilus"]                   floating enable 
-    for_window [app_id="Nautilus"]                   resize set height 540
-    for_window [app_id="Nautilus"]                   resize set width 960
+    #for_window [app_id="mpv"]                        resize set height 540
+    #for_window [app_id="mpv"]                        resize set width 960
+    for_window [app_id="nemo"]                       floating enable 
+    #for_window [app_id="nemo"]                       resize set height 540
+    #for_window [app_id="nemo"]                       resize set width 960
 
 #-------------------------------------------------------#
 # Sticky floating windows(sticky enable|disable|toggle) #
@@ -82,7 +84,7 @@ smart_borders on
 # Program Opacity #
 #-----------------#
     for_window [app_id="telegram"]                    opacity 0.95
-    for_window [app_id="danmufloat"]                    opacity 0.80
+    for_window [app_id="danmufloat"]                  opacity 0.80
     for_window [app_id="icalingua"]                   opacity 0.95
     for_window [class="netease-cloud-music"]          opacity 0.90
 
@@ -117,7 +119,7 @@ smart_borders on
 # Make capslock work as escape #
 #-------------------------------#
 input "type:keyboard" {           
-        xkb_layout us
+        xkb_layout us_intl
         xkb_options caps:escape
 }
 
@@ -126,11 +128,13 @@ input "type:keyboard" {
 # set gtk+ theme #
 #----------------#
     set $gnome-schema org.gnome.desktop.interface
+    # Load GTK options from settings.ini
+
     exec_always {
         gsettings set $gnome-schema gtk-theme 'Catppuccin'
         gsettings set $gnome-schema icon-theme 'Papirus-Dark'
-        gsettings set $gnome-schema cursor-theme 'Catppuccin-cursor'
-        gsettings set $gnome-schema font-name 'jetbrains mono nerd font 10'
+        gsettings set $gnome-schema cursor-theme 'Bibata-Modern-Classic'
+        gsettings set $gnome-schema font-name 'Ubuntu regular 11'
     }
 
 
@@ -199,10 +203,10 @@ input "type:keyboard" {
 # Idle configuration #
 #--------------------#
     #exec swayidle -w \
-            #timeout 300 '~/.config/sway/swaylock.sh' \
-            #timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-            #timeout 6 'systemctl suspend' \
-            #before-sleep '~/.config/sway/swaylock.sh'
+    #        timeout 600 '~/.config/sway/swaylock.sh' \
+    #        timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+    #        timeout 6 'systemctl suspend' \
+    #        before-sleep '~/.config/sway/swaylock.sh'
 
    # exec swayidle -w \
    #        timeout 900 'systemctl suspend' \
@@ -231,20 +235,22 @@ input "type:keyboard" {
 #----------------#
     # Start a terminal
     bindsym $mod+Return exec $term
-    bindsym $mod+Shift+Return exec wezterm --class="termfloat"
+    # bindsym $mod+Shift+Return exec wezterm --class="termfloat"
     # bindsym $mod+Shift+m exec wezterm --class="musicfox" --hold sh -c "musicfox"
     # bindsym $mod+Shift+d exec wezterm --class="danmufloat" --hold sh -c "cd /home/ko4/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && ./main" 
 
 
     # quick start some applications
     bindsym $mod+m exec --no-startup-id              spotify
-    bindsym $mod+n exec --no-startup-id              wezterm -e /opt/nvim-linux64/bin/nvim
-    bindsym $mod+b exec --no-startup-id              vivaldi
+    bindsym $mod+b exec --no-startup-id              wezterm -e btop
+    bindsym $mod+d exec --no-startup-id              wezterm -e yazi
+    bindsym $mod+n exec --no-startup-id              wezterm -e nvim
+    bindsym $mod+w exec --no-startup-id              vivaldi
     #bindsym $mod+Shift+d exec --no-startup-id        wezterm --hold sh -c "cd /home/ko4/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && ./main"
     bindsym $mod+Shift+x exec --no-startup-id        ~/.config/sway/swaylock.sh
-    bindsym $mod+t exec --no-startup-id              telegram-desktop
+    #bindsym $mod+t exec --no-startup-id              telegram-desktop
     #bindsym $mod+q exec --no-startup-id              icalingua --enable-features=UseOzonePlatform --ozone-platform=wayland
-    bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
+    bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/Screenshots/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
     bindsym $mod+bracketright exec --no-startup-id   grimshot --notify  copy area 
     bindsym $mod+a exec --no-startup-id             ~/.config/sway/grimshot_watermark.sh
 
@@ -254,9 +260,11 @@ input "type:keyboard" {
 
     # Start your launcher
     bindsym $mod+space exec ~/.config/rofi/launcher/run.sh
+    #bindsym $mod+space exec ~/.config/rofi_sway/launcher.sh
 
     # Start your powermenu
     bindsym $mod+p exec ~/.config/rofi/powermenu/run.sh
+    #bindsym $mod+p exec ~/.config/rofi_sway/powermenu.sh
 
     # Reload the configuration file
     bindsym $mod+Shift+c reload
@@ -369,7 +377,7 @@ bindsym $mod+minus move scratchpad
 bindsym $mod+equal scratchpad show
 
 #----------------------#
-# Resizing containers: #
+# Resizing containers: 
 #----------------------#
 bindsym $mod+r mode "resize"
 mode "resize" {

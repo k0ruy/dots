@@ -1,5 +1,6 @@
 * {
-  font-family: "JetBrainsMono Nerd Font";
+  /*font-family: "JetBrainsMono Nerd Font";*/
+  font-family: "Ubuntu Mono";
   font-size: 10pt;
   font-weight: bold;
   border-radius: 3px;
@@ -61,7 +62,7 @@ tooltip label {
   padding-right: 6px;
   color: rgb(201, 203, 255);
 }
-#mode, #clock, #memory, #temperature,#cpu,#mpd, #idle_inhibitor, #temperature, #backlight, #pulseaudio, #network, #battery, #custom-powermenu, #custom-cava-internal {
+#mode, #clock, #memory, #temperature,#cpu,#mpd, #idle_inhibitor, #temperature, #backlight, #pulseaudio, #network, #battery, #custom-powermenu, #custom-cava-internal, #custom-spotify {
   padding-left: 10px;
   padding-right: 10px;
   color: rgb(181, 232, 224);
@@ -124,4 +125,7 @@ tooltip label {
 }
 #custom-cava-internal{
   font-family: "Hack Nerd Font" ;
+}
+#custom-spotify{
+  color: #676d86;
 }

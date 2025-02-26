@@ -4,5 +4,6 @@ border-color=#96CDFB
 progress-color=over #302D41
 default-timeout=5000
 font=JetbrainsMono Nerd Font 10
+
 [urgency=high]
 border-color=#F8BD96

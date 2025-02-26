@@ -50,18 +50,33 @@ run_rofi() {
 	echo -e "$lock\n$suspend\n$logout\n$reboot\n$shutdown" | rofi_cmd
 }
 
+# locks the screen before going to sleep. (waits 5 seconds before suspending)
+run_swaylock() {
+    swaylock -f  \
+       -i /home/ko4/Pictures/Wallpapers/lockscreen.jpg \
+       -l \
+       --indicator-radius 100 \
+       --indicator-thickness 7 \
+       --ring-color 3b4252 \
+       --key-hl-color 880033 \
+       --line-color 00000000 \
+       --inside-color 00000088 \
+       --separator-color 00000000 \
+     && sleep 5 \
+     && systemctl suspend
+}
+
 # Execute Command
 run_cmd() {
 	selected="$(confirm_exit)"
 	if [[ "$selected" == "$yes" ]]; then
 		if [[ $1 == '--shutdown' ]]; then
-			xfce4-session-logout --halt
+			systemctl poweroff
 		elif [[ $1 == '--reboot' ]]; then
-			xfce4-session-logout --reboot
+			systemctl reboot
 		elif [[ $1 == '--suspend' ]]; then
-			mpc -q pause
-			amixer set Master mute
-			systemctl suspend
+			#amixer set Master mute
+            run_swaylock
 		elif [[ $1 == '--logout' ]]; then
 			if [[ "$DESKTOP_SESSION" == 'openbox' ]]; then
 				openbox --exit
@@ -69,8 +84,8 @@ run_cmd() {
 				bspc quit
 			elif [[ "$DESKTOP_SESSION" == 'xfce' ]]; then
 				xfce4-session-logout --logout
-			elif [[ "$DESKTOP_SESSION" == 'i3' ]]; then
-				i3-msg exit
+			elif [[ "$DESKTOP_SESSION" == 'sway' ]]; then
+				sway exit
 			elif [[ "$DESKTOP_SESSION" == 'plasma' ]]; then
 				qdbus org.kde.ksmserver /KSMServer logout 0 0 0
 			fi
@@ -90,7 +105,7 @@ case ${chosen} in
 		run_cmd --reboot
         ;;
     $lock)
-    dm-tool lock
+    sh /home/ko4/.config/sway/swaylock.sh
         ;;
     $suspend)
 		run_cmd --suspend
