@@ -61,9 +61,9 @@ Some general info (switched to linux mint and sway, old arch stuff is kinda gone
 | Super + Enter | Terminal |
 | Super + n | Neovim |
 | Super + b | BTop++ |
-| Super + Shift + <number> | Move window to workspace |
-| Super + Ctrl + <number> | Move window to workspace and switch to that workspace |
-| Super + <number> | Go to workspace |
+| Super + Shift + Number | Move window to workspace |
+| Super + Ctrl + Number | Move window to workspace and switch to that workspace |
+| Super + Number | Go to workspace |
 | Super + w | Web browser |
 | Super + m | Spotify |
 
