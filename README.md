@@ -39,8 +39,9 @@ Some general info (switched to linux mint and sway, old arch stuff is kinda gone
 > If you fail to do so, all the genmon plugins that use sudo commands and update rather quickly (3s or so) will try to use the command without having sufficient permissions. You have only a finite amount of tries before the use of `sudo` is blocked due to too many failed attempts, forcing you to restart the system to reset this. Please first update accordingly the sudoers file using `sudo visudo` and ***LATER*** apply the scripts to the genmon plugin.  -->
 
 ## Showcasing desktop
-*Desktop with nvim, btop++, wezterm terminal running `cbonsai`, mako notifications:*
-![2025-03-26T10:49:27_no_watermark](https://github.com/user-attachments/assets/908347da-b5a0-4c81-8092-2978f016f705)
+*Desktop with nvim, btop++, wezterm terminal running `cbonsai`, mako notifications, rofi search:*
+![2025-03-26T10:52:35_no_watermark](https://github.com/user-attachments/assets/2f90406b-9a0a-4d7f-b619-5499a065b838)
+
 
 
 
