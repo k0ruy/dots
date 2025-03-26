@@ -1,12 +1,12 @@
 * {
-  /*font-family: "JetBrainsMono Nerd Font";*/
-  font-family: "Ubuntu Mono";
+  font-family: "JetBrainsMono Nerd Font";
+  /*font-family: "Ubuntu Mono";*/
   font-size: 10pt;
   font-weight: bold;
   border-radius: 3px;
   min-height: 0;
   transition-property: background-color;
-  transition-duration: 0.5s;
+  transition-duration: 0.3s;
 }
 @keyframes blink_red {
   to {
@@ -62,16 +62,20 @@ tooltip label {
   padding-right: 6px;
   color: rgb(201, 203, 255);
 }
-#mode, #clock, #memory, #temperature,#cpu,#mpd, #idle_inhibitor, #temperature, #backlight, #pulseaudio, #network, #battery, #custom-powermenu, #custom-cava-internal, #custom-spotify {
+#mode, #clock, #memory, #temperature,#cpu,#mpd, #idle_inhibitor, #temperature, #backlight, #pulseaudio, #network, #battery, #custom-powermenu, #custom-cava-internal, 
+
+#custom-spotify {
   padding-left: 10px;
   padding-right: 10px;
-  color: rgb(181, 232, 224);
+  color: #676d86;
+/*color: rgb(181, 232, 224);*/
 }
 /* #mode { */
 /* 	margin-left: 10px; */
 /* 	background-color: rgb(248, 189, 150); */
 /*     color: rgb(26, 24, 38); */
 /* } */
+
 #memory {
   color: rgb(181, 232, 224);
 }

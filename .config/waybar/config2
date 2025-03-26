@@ -3,10 +3,8 @@
     "custom/launcher",
     "sway/workspaces",
     "temperature",
-    //"idle_inhibitor",
+    "custom/cava-internal",  
     "custom/spotify",
-    //"mpd",
-    "custom/cava-internal",
   ],
   "modules-center": [
     "clock"
@@ -127,7 +125,7 @@
     "tooltip": false
   },
   "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon4/temp2_input",
+    "hwmon-path": "/sys/class/hwmon/hwmon3/temp2_input",
     //"exec": "sensors | grep "Package id 0" | awk '{print $4}'",
     //"critical-threshold": 80,
     "tooltip": false,

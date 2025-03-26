@@ -18,7 +18,7 @@ change_wallpaper() {
 change_wallpaper
 
 while true; do
-    sleep 580
+    sleep 2000
     change_wallpaper
     sleep 5
     if [ -f /tmp/swaybg_pid ]; then
