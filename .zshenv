@@ -1,3 +1,5 @@
-export VISUAL=nvim 
-export EDITOR=nvim
 . "$HOME/.cargo/env"
+
+# export env variables
+EDITOR=nvim
+

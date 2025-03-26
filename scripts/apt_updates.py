@@ -29,5 +29,3 @@ xml_txt = f"<txt>  {update_count}</txt><txtclick>{click_command}</txtclick>"
 xml_tool = "<tool> Click to update system</tool>"
 print(xml_txt)
 print(xml_tool)
-
-

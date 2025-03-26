@@ -1,5 +1,4 @@
 
-
 #################################################################################################
 #					CUSTOMIZATIONS
 #################################################################################################
@@ -11,19 +10,17 @@ echo "lmao im in a terminal" | cowthink -s -f three-eyes
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
-
-
 #################################################################################################
 #					ZSHRC BEGIN
 #################################################################################################
 
 
-
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export PATH="$PATH:/opt/nvim-linux64/bin"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -143,5 +140,12 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
+#################################################################################################
+#					NVM
+#################################################################################################
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
 
 

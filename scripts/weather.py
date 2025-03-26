@@ -2,8 +2,8 @@ import requests
 import datetime
 
 # Replace YOUR_API_KEY with your actual API key from OpenWeatherMap
-api_key = "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
-city = "cccccccc"
+api_key = "e275251187aeb500b1ccfac1e171e6db"
+city = "Novaggio"
 
 # Set the URL for the OpenWeatherMap API to fetch the current weather in Lugano
 url = f"http://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={api_key}"
@@ -17,6 +17,7 @@ icons = {
     "Thunderstorm": " ",
     "Snow": "󰼶 ",
     "Mist": "󰖑 ",
+    "Haze": "󰖑 ",
     "NightClear": " ",
     "NightClouds": " ",
     "NightRain": " ",
@@ -56,7 +57,7 @@ if response.status_code == 200:
         elif condition == "Snow":
             icon = icons["NightSnow"]
         elif condition == "Mist":
-            icon = icons["Mist"]
+            icon = icons["Haze"]
         elif condition == "Haze":
             icon = icons["Mist"]
         else:

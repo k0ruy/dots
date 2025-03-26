@@ -58,7 +58,7 @@ if pidof spotify &> /dev/null; then
 else 
 	echo "<img>${ICON_OFFLINE}</img>"
   echo "<txt> $(echo 'Spotify not running' | awk '{printf "%-22s", $0}')</txt>"
-	echo "<tool>Spotify is not running</tool>"
+	echo "<tool>Click to open Spotify</tool>"
 	echo "<txtclick>spotify</txtclick>"
   echo "<click>spotify</click>"
 fi

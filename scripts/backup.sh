@@ -2,7 +2,7 @@
 
 export DBUS_SESSION_BUS_ADDRESS='unix:path=/run/user/1000/bus'
 # Directories to backup
-directories=("btop" "nvim" "rofi" "kitty" "picom" "yazi" "dunst")
+directories=("btop" "nvim" "kitty")
 
 # Source and backup directories
 source_dir="$HOME/.config"
