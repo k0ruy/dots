@@ -138,7 +138,7 @@
     "tooltip": false
   },
   "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon3/temp2_input",
+    "hwmon-path": "/sys/class/hwmon/hwmon4/temp2_input",
     "format": " {temperatureC}°C",
     "tooltip": false
   },
