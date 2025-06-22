@@ -78,3 +78,11 @@ btop++ needs an interactive shell to run.
 2024/12/05 (13:16:58) | ===> btop++ v.1.2.3
 2024/12/05 (13:16:58) | ERROR: No UTF-8 locale detected!
 Use --utf-force argument to force start if you're sure your terminal can handle it.
+
+2025/05/02 (10:55:44) | ===> btop++ v.1.3.0
+2025/05/02 (10:55:44) | ERROR: No tty detected!
+btop++ needs an interactive shell to run.
+
+2025/05/02 (10:55:46) | ===> btop++ v.1.3.0
+2025/05/02 (10:55:46) | ERROR: No tty detected!
+btop++ needs an interactive shell to run.

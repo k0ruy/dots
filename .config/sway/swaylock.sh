@@ -1,6 +1,6 @@
 #!/bin/bash
 swaylock  \
-       -i /home/ko4/Pictures/Wallpapers/lockscreen.jpg \
+       -i /home/ko4/Pictures/lockscreens/wallhaven-w5oq3p.jpg \
        -l \
        --indicator-radius 100 \
        --indicator-thickness 7 \

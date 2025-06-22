@@ -124,11 +124,13 @@ class PlayerManager:
             track_info = title
 
         if track_info:
-            track_info = track_info[:12] + '...' + track_info[-12:] if len(track_info) > 24 else track_info
+            track_info = track_info[:12] + f'...' + track_info[-12:] if len(track_info) > 24 else track_info
             if player.props.status == "Playing":
-                track_info = "<span foreground='#bb9af7'>  </span>" + track_info # "  "
+                # track_info = "<span foreground='#bb9af7'>  </span>" + track_info # "  "
+                track_info = f"<span foreground='#ABE9B3'>{track_info}</span>" # "  "
             else:
-                track_info = "  " + track_info # "  "
+                #track_info = "  " + track_info # "  "
+                track_info = track_info
         # only print output if no other player is playing
         current_playing = self.get_first_playing_player()
         if current_playing is None or current_playing.props.player_name == player.props.player_name:

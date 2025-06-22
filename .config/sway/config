@@ -46,7 +46,9 @@ smart_borders on
 #------------------------------#
 #swaymsg -t get_tree | grep app_id
     for_window [app_id="pop-up"]                     floating enable
-    for_window [app_id="xviewer"]                     floating enable
+    for_window [class="pomofocus"]                   floating enable
+    for_window [class="Xreader"]                     floating enable
+    for_window [app_id="xviewer"]                    floating enable
     for_window [app_id="com.cisco.secureclient.gui"] floating enable
     for_window [class="feh"]                         floating enable
     for_window [app_id="org.pwmt.zathura"]           floating enable
@@ -63,14 +65,14 @@ smart_borders on
     for_window [app_id="webconsole"]                 floating enable
     for_window [app_id="Authy"]                      floating enable
     for_window [app_id="org.wezfurlong.wezterm"]     floating enable
-    #for_window [app_id="org.wezfurlong.wezterm"]     resize set height 540
-    #for_window [app_id="org.wezfurlong.wezterm"]     resize set width 960
+    #for_window [app_id="org.wezfurlong.wezterm"]    resize set height 540
+    #for_window [app_id="org.wezfurlong.wezterm"]    resize set width 960
     for_window [app_id="mpv"]                        floating enable 
-    #for_window [app_id="mpv"]                        resize set height 540
-    #for_window [app_id="mpv"]                        resize set width 960
+    #for_window [app_id="mpv"]                       resize set height 540
+    #for_window [app_id="mpv"]                       resize set width 960
     for_window [app_id="nemo"]                       floating enable 
-    #for_window [app_id="nemo"]                       resize set height 540
-    #for_window [app_id="nemo"]                       resize set width 960
+    #for_window [app_id="nemo"]                      resize set height 540
+    #for_window [app_id="nemo"]                      resize set width 960
 
 #-------------------------------------------------------#
 # Sticky floating windows(sticky enable|disable|toggle) #

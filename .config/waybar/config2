@@ -24,6 +24,7 @@
     "on-click": "~/.config/rofi/launcher/run.sh",
     "tooltip": false
   },
+
   "custom/cava-internal": {
     "exec": "~/.config/waybar/Cava.sh",
     //"exec": "~/.config/waybar/cava-internal.sh",
@@ -37,8 +38,8 @@
     "format": "{}",
     "return-type": "json",
     "on-click": "playerctl play-pause",
-    "on-scroll-up": "playerctl next",
-    "on-scroll-down": "playerctl previous"
+    "on-scroll-up": "playerctl previous",
+    "on-scroll-down": "playerctl next"
 },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -125,9 +126,10 @@
     "tooltip": false
   },
   "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon4/temp2_input",
+    "hwmon-path": "/sys/class/hwmon/hwmon2/temp2_input",
     //"exec": "sensors | grep "Package id 0" | awk '{print $4}'",
     //"critical-threshold": 80,
+    "on-click-right": "wezterm -e btop",
     "tooltip": false,
     "format": " {temperatureC}°C"
   },
