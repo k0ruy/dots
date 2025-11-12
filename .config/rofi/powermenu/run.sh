@@ -53,7 +53,7 @@ run_rofi() {
 # locks the screen before going to sleep. (waits 5 seconds before suspending)
 run_swaylock() {
     swaylock -f  \
-       -i /home/ko4/Pictures/lockscreens/wallhaven-w5oq3p.jpg \
+       -i /home/ko4/Pictures/lockscreens/current \
        -l \
        --indicator-radius 100 \
        --indicator-thickness 7 \

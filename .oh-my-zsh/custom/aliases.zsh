@@ -7,13 +7,13 @@ alias ls='exa -s date --grid --long --header --no-time --no-permissions --across
 alias la='exa -s date --grid --long --header --no-time --no-permissions --across --icons -all'
 
 # zoxide as cd for better directories navigation
-#alias cd=z
+# alias cd=z
 
 # other
 alias grep='grep --color=auto'
 alias cda='conda activate'
 alias cdd='conda deactivate'
-alias s='sudo apt'
+alias s='sudo apt update && sudo apt'
 alias sup='sudo apt update'
 alias md='mkdir'
 alias e='nvim'

@@ -36,7 +36,7 @@ config.animation_fps = 75
 config.initial_cols = 130
 config.initial_rows = 42
 
-config.window_background_opacity = 0.90
+config.window_background_opacity = 0.98
 config.use_resize_increments = true
 
 config.font_size = 10

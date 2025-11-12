@@ -124,7 +124,8 @@ class PlayerManager:
             track_info = title
 
         if track_info:
-            track_info = track_info[:12] + f'...' + track_info[-12:] if len(track_info) > 24 else track_info
+            my_len = 16
+            track_info = track_info[:my_len] + f'...' + track_info[-my_len:] if len(track_info) > (my_len * 2) else track_info
             if player.props.status == "Playing":
                 # track_info = "<span foreground='#bb9af7'>  </span>" + track_info # "  "
                 track_info = f"<span foreground='#ABE9B3'>{track_info}</span>" # "  "
