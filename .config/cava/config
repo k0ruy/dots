@@ -199,7 +199,7 @@
 
 [color]
 
-gradient = 1
+gradient = 0
 
 gradient_color_1 = '#B5E8E0'
 gradient_color_2 = '#89DCEB'

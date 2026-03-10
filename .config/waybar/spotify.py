@@ -124,8 +124,17 @@ class PlayerManager:
             track_info = title
 
         if track_info:
-            my_len = 16
-            track_info = track_info[:my_len] + f'...' + track_info[-my_len:] if len(track_info) > (my_len * 2) else track_info
+            my_len = 10
+
+            artist, title = track_info.split('-', 1)
+
+            def shorten(text, limit):
+                if len(text) <= limit * 2:
+                    return text
+                return f"{text[:limit]}...{text[-limit:]}"
+
+            track_info = f"{shorten(artist, my_len)} - {shorten(title, my_len)}"
+
             if player.props.status == "Playing":
                 # track_info = "<span foreground='#bb9af7'>  </span>" + track_info # "  "
                 track_info = f"<span foreground='#ABE9B3'>{track_info}</span>" # "  "

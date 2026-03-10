@@ -45,6 +45,9 @@ smart_borders on
 # Always float certain windows #
 #------------------------------#
 #swaymsg -t get_tree | grep app_id
+    for_window [app_id="io.github.celluloid_player.Celluloid"]          floating enable
+    for_window [app_id="anki"]          floating enable
+    for_window [app_id="gnome-calculator"]          floating enable
     for_window [class="Minecraft Launcher"]          floating enable
     for_window [app_id="pop-up"]                     floating enable
     for_window [class="pomofocus"]                   floating enable
@@ -244,7 +247,7 @@ input "type:keyboard" {
         natural_scroll disabled
         dwt enabled
         accel_profile "flat" # disable mouse acceleration (enabled by default; to set it manually, use "adaptive" instead of "flat")
-        pointer_accel 0.5 # set mouse sensitivity (between -1 and 1)
+        pointer_accel 0 # set mouse sensitivity (between -1 and 1)
     }
 
 
