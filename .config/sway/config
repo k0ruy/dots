@@ -32,9 +32,8 @@ exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activati
 
 corner_radius 10
 
-# Shadows and dimming for macOS-like effect
 # Dimming for macOS-like unfocused window effect
-default_dim_inactive 0.40
+default_dim_inactive 0.25
 default_border pixel 2
 default_floating_border pixel 2
 gaps inner 5
