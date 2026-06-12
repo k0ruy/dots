@@ -34,7 +34,7 @@ config.animation_fps = 75
 --config.cursor_blink_ease_in = 'Constant'
 --config.cursor_blink_ease_out = 'Constant'
 config.initial_cols = 130
-config.initial_rows = 42
+config.initial_rows = 50
 
 config.window_background_opacity = 0.98
 config.use_resize_increments = true

@@ -25,13 +25,18 @@ bindsym $mod+comma workspace prev
 #-----------------------------#
 #           Misc              #
 #-----------------------------#
-output * adaptive_sync on
-  
+output * adaptive_sync off
+
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK XDG_CURRENT_DESKTOP
 
-default_border pixel 3
-default_floating_border pixel 3
+corner_radius 10
+
+# Shadows and dimming for macOS-like effect
+# Dimming for macOS-like unfocused window effect
+default_dim_inactive 0.40
+default_border pixel 2
+default_floating_border pixel 2
 gaps inner 5
 #gaps outer  50
 #bindsym $mod+shift+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 5 
@@ -39,7 +44,7 @@ gaps inner 5
 
 # Activate smart borders (always)
 smart_borders on
-#smart_gaps on
+smart_gaps off
 
 #------------------------------#
 # Always float certain windows #
@@ -201,8 +206,8 @@ input "type:keyboard" {
 #-------------------------------------------------#
 # Control volume,monitor brightness,media players #
 #-------------------------------------------------#
-    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
-    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+    bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +6%
+    bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -6%
     bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
     bindsym XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
     bindsym XF86MonBrightnessUp exec light -A 5
@@ -250,26 +255,31 @@ input "type:keyboard" {
         pointer_accel 0 # set mouse sensitivity (between -1 and 1)
     }
 
+    # Main displays
+    output DP-2 pos 0 0 res 2560x1440
+
 
 #----------------#
 # Key bindings --#
 #----------------#
     # Start a terminal
-    bindsym $mod+Return exec $term
-    # bindsym $mod+Shift+Return exec wezterm --class="termfloat"
-    # bindsym $mod+Shift+m exec wezterm --class="musicfox" --hold sh -c "musicfox"
-    # bindsym $mod+Shift+d exec wezterm --class="danmufloat" --hold sh -c "cd /home/ko4/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && ./main" 
+    bindsym $mod+t exec $term
+    # bindsym $mod+Shift+t exec wezterm --class="termfloat"
 
+    # Tablet (below, center) - create then configure (config output alone doesn't create headless)
+    bindsym $mod+Shift+o exec ~/.config/sway/tablet.sh
+    bindsym $mod+Shift+Ctrl+o exec ~/.config/sway/disable_tablet.sh
+    
 
     # quick start some applications
     bindsym $mod+m exec --no-startup-id              spotify
+    bindsym $mod+c exec --no-startup-id              code
     bindsym $mod+b exec --no-startup-id              wezterm -e btop
     bindsym $mod+d exec --no-startup-id              wezterm -e yazi
     bindsym $mod+n exec --no-startup-id              wezterm -e nvim
     bindsym $mod+w exec --no-startup-id              vivaldi
     #bindsym $mod+Shift+d exec --no-startup-id        wezterm --hold sh -c "cd /home/ko4/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && ./main"
     bindsym $mod+Shift+x exec --no-startup-id        ~/.config/sway/swaylock.sh
-    #bindsym $mod+t exec --no-startup-id              telegram-desktop
     #bindsym $mod+q exec --no-startup-id              icalingua --enable-features=UseOzonePlatform --ozone-platform=wayland
     bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/Screenshots/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
     bindsym $mod+bracketright exec --no-startup-id   grimshot --notify  copy area 

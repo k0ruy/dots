@@ -123,10 +123,11 @@
     "format-ethernet": "󰈀  {ifname}", // ({ipaddr})",
     "format-linked": "󰤭 {essid} (No IP)",
     "format-disconnected": "󰤭 Disconnected",
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "wezterm -e nmtui",
   },
   "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon5/temp2_input",
+    "hwmon-path": "/sys/class/hwmon/hwmon4/temp2_input",
     //"exec": "sensors | grep "Package id 0" | awk '{print $4}'",
     //"critical-threshold": 80,
     "on-click-right": "wezterm -e btop",
