@@ -34,8 +34,8 @@ corner_radius 10
 
 # Dimming for macOS-like unfocused window effect
 default_dim_inactive 0.25
-default_border pixel 2
-default_floating_border pixel 2
+default_border pixel 1
+default_floating_border pixel 1
 gaps inner 5
 #gaps outer  50
 #bindsym $mod+shift+g exec swaymsg gaps outer all set 0 && swaymsg gaps inner all set 5 
@@ -145,10 +145,12 @@ input "type:keyboard" {
 #----------------#
     set $gnome-schema org.gnome.desktop.interface
     # Load GTK options from settings.ini
+    # gsettings set $gnome-schema gtk-theme 'Catppuccin'
+    # gsettings set $gnome-schema icon-theme 'MacTahoe'
 
     exec_always {
-        gsettings set $gnome-schema gtk-theme 'Catppuccin'
-        gsettings set $gnome-schema icon-theme 'Papirus-Dark'
+        gsettings set $gnome-schema gtk-theme 'Dracula'
+        gsettings set $gnome-schema icon-theme 'Dracula'
         gsettings set $gnome-schema cursor-theme 'Bibata-Modern-Classic'
         gsettings set $gnome-schema font-name 'Ubuntu regular 11'
     }

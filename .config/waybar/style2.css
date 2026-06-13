@@ -1,16 +1,15 @@
 * {
-   /*font-family: "JetBrainsMono Nerd Font";*/
-  font-family: "Comic Code";
-  /*font-family: "Ubuntu Mono";*/
+  font-family: "Comic Code", "JetBrainsMono Nerd Font";
   font-size: 10pt;
   font-weight: bold;
-  border-radius: 3px;
+  border-radius: 10px;
   min-height: 0;
   transition-property: background-color;
   transition-duration: 0.3s;
 }
 @keyframes blink_red {
   to {
+    /*background-color: rgb(242, 143, 173);*/
     background-color: rgb(242, 143, 173);
     color: rgb(26, 24, 38);
   }
@@ -29,7 +28,8 @@ window > box {
   margin-left: 5px;
   margin-right: 5px;
   margin-top: 5px;
-  background-color: rgb(30, 30, 46);
+  /*background-color: rgb(30, 30, 46);*/
+  background-color: rgba(30, 30, 30, 0.8);
 }
 #workspaces {
   padding-left: 0px;
@@ -58,18 +58,21 @@ tooltip {
 tooltip label {
   color: rgb(217, 224, 238);
 }
+/*gentoo logo:*/
 #custom-launcher {
   padding-left: 8px;
   padding-right: 6px;
   color: rgb(201, 203, 255);
+
 }
 #mode, #clock, #memory, #temperature,#cpu,#mpd, #idle_inhibitor, #temperature, #backlight, #pulseaudio, #network, #battery, #custom-powermenu, #custom-cava-internal, 
 
+/* cava color*/
 #custom-spotify {
   padding-left: 10px;
   padding-right: 10px;
   color: #676d86;
-/*color: rgb(181, 232, 224);*/
+  /*color: rgb(181, 232, 224);*/
 }
 /* #mode { */
 /* 	margin-left: 10px; */
@@ -84,6 +87,7 @@ tooltip label {
   color: rgb(245, 194, 231);
 }
 #clock {
+  /*color: rgb(0, 0, 0);*/
   color: rgb(217, 224, 238);
 }
 #idle_inhibitor {
@@ -132,5 +136,6 @@ tooltip label {
   font-family: "Hack Nerd Font" ;
 }
 #custom-spotify{
+  /*color: #000000;*/
   color: #676d86;
 }

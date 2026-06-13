@@ -2,10 +2,11 @@
 configuration {
     show-icons:                 false;
     font:                       "JetBrainsMono Nerd Font 10";
+// JetBrainsMono Nerd Font 10
 }
 
 // Globals.
-@import "~/.config/rofi/themes/nord.rasi"
+@import "~/.config/rofi/colors/paper.rasi"
 
 // Main window.
 window {
@@ -115,6 +116,6 @@ element-text {
     horizontal-align:            0.5;
 }
 element selected.normal {
-    background-color:            var(selected);
+    background-color:            var(foreground);
     text-color:                  var(background);
 }

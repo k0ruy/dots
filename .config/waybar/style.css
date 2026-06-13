@@ -1,0 +1,196 @@
+* {
+    font-family: "Comic Code", "JetBrainsMono Nerd Font", monospace;
+    font-size: 11pt;
+    font-weight: 500;
+    border-radius: 12px;
+    min-height: 0;
+    transition-property: background-color, color, border;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+@keyframes blink_urgent {
+    0%, 100% { background-color: rgba(255, 69, 58, 0.8); color: white; }
+    50% { background-color: rgba(255, 69, 58, 0.4); color: rgba(255,255,255,0.7); }
+}
+
+.warning, .critical, .urgent {
+    animation-name: blink_urgent;
+    animation-duration: 0.8s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+window#waybar {
+    background-color: rgba(30, 30, 35, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+    padding: 4px 8px;
+    margin: 4px 8px;
+}
+
+window > box {
+    background-color: transparent;
+}
+
+#workspaces {
+    padding: 0 4px;
+}
+
+#workspaces button {
+    padding: 6px 12px;
+    margin: 0 2px;
+    background-color: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+}
+
+#workspaces button.focused {
+    background-color: rgba(0, 122, 255, 0.9);
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 122, 255, 0.4);
+}
+
+#workspaces button.urgent {
+    background-color: rgba(255, 69, 58, 0.9);
+    color: white;
+}
+
+#workspaces button:hover:not(.focused) {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+}
+
+tooltip {
+    background: rgba(40, 40, 50, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 8px 12px;
+    backdrop-filter: blur(10px);
+}
+
+tooltip label {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 10pt;
+}
+
+#custom-launcher {
+    padding: 0 10px;
+    color: rgba(0, 122, 255, 0.9);
+    font-weight: 600;
+}
+
+#clock,
+#memory,
+#cpu,
+#temperature,
+#idle_inhibitor,
+#backlight,
+#pulseaudio,
+#network,
+#battery,
+#custom-powermenu,
+#custom-cava-internal,
+#custom-spotify,
+#mpd,
+#mode {
+    padding: 4px 12px;
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.05);
+    margin: 0 3px;
+    border-radius: 8px;
+}
+
+#clock {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+}
+
+#memory {
+    color: rgba(100, 210, 255, 0.9);
+}
+
+#cpu {
+    color: rgba(200, 150, 255, 0.9);
+}
+
+#temperature {
+    color: rgba(255, 180, 100, 0.9);
+}
+
+#idle_inhibitor {
+    color: rgba(150, 220, 150, 0.9);
+}
+
+#backlight {
+    color: rgba(255, 220, 150, 0.9);
+}
+
+#pulseaudio {
+    color: rgba(255, 180, 180, 0.9);
+}
+
+#network {
+    color: rgba(150, 255, 150, 0.9);
+}
+
+#battery.charging,
+#battery.full {
+    color: rgba(100, 255, 150, 0.9);
+    background-color: rgba(100, 255, 150, 0.1);
+}
+
+#battery.discharging {
+    color: rgba(255, 200, 100, 0.9);
+}
+
+#battery.critical:not(.charging) {
+    color: rgba(255, 80, 80, 0.95);
+    background-color: rgba(255, 80, 80, 0.15);
+}
+
+#custom-powermenu {
+    color: rgba(255, 100, 100, 0.9);
+}
+
+#tray {
+    padding: 0 8px;
+    background-color: transparent;
+}
+
+#mpd.paused {
+    color: rgba(255, 255, 255, 0.3);
+    font-style: italic;
+}
+
+#mpd.stopped {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+#mpd {
+    color: rgba(180, 200, 255, 0.9);
+}
+
+#custom-cava-internal {
+    font-family: "Hack Nerd Font", monospace;
+    color: rgba(150, 255, 200, 0.8);
+}
+
+#custom-spotify {
+    color: rgba(80, 200, 120, 0.9);
+}
+
+/* Hover effects for interactive modules */
+#pulseaudio:hover,
+#network:hover,
+#battery:hover,
+#temperature:hover,
+#memory:hover,
+#cpu:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.95);
+}
