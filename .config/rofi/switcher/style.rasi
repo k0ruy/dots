@@ -4,11 +4,11 @@ configuration {
     show-icons:                 true;
     display-window:             "  Windows";
     font:                       "JetBrainsMono Nerd Font 10";
-    icon-theme:                 "Papirus";
+    icon-theme:                 "Dracula";
 }
 
 // Globals.
-@import "~/.config/rofi/themes/nord.rasi"
+@import "~/.config/rofi/colors/paper.rasi"
 
 // Main window.
 window {

@@ -2,7 +2,6 @@
 configuration {
     show-icons:                 false;
     font:                       "JetBrainsMono Nerd Font 10";
-// JetBrainsMono Nerd Font 10
 }
 
 // Globals.
@@ -116,6 +115,6 @@ element-text {
     horizontal-align:            0.5;
 }
 element selected.normal {
-    background-color:            var(foreground);
+    background-color:            var(selected);
     text-color:                  var(background);
 }
