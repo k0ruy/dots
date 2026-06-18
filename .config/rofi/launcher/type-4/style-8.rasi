@@ -10,7 +10,7 @@
 /*****----- Configuration -----*****/
 configuration {
 	modi:                       "drun,run,filebrowser";
-    show-icons:                 false;
+    show-icons:                 true;
     display-drun:               "drun";
     display-run:                "run";
     display-filebrowser:        "files";
@@ -35,7 +35,7 @@ configuration {
     urgent-foreground:           var(background);
     active-background:           var(active);
     active-foreground:           var(background);
-    selected-normal-background:  var(selected);
+    selected-normal-background:  var(active);
     selected-normal-foreground:  var(background);
     selected-urgent-background:  var(active);
     selected-urgent-foreground:  var(background);
@@ -56,7 +56,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       1000px;
+    width:                       500px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -64,8 +64,8 @@ window {
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      0px solid;
-    border-radius:               0px;
+    border:                      1px solid;
+    border-radius:               10px;
     border-color:                @border-colour;
     cursor:                      "default";
     background-color:            @background-colour;
@@ -88,11 +88,11 @@ mainbox {
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    margin:                      0px;
+    margin:                      10px;
     padding:                     0px 5px;
     border:                      0px;
-    border-radius:               0px;
-    border-color:                @border-colour;
+    border-radius:               10px;
+    border-color:                @foreground;
     background-color:            @background-colour;
     text-color:                  @foreground-colour;
     children:                    [ "prompt", "textbox-prompt-colon", "entry" ];
@@ -122,7 +122,7 @@ entry {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     3;
+    columns:                     1;
     lines:                       10;
     cycle:                       true;
     dynamic:                     true;

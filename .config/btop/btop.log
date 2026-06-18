@@ -264,3 +264,6 @@ btop++ needs an interactive shell to run.
 
 2026/06/13 (21:24:06) | ===> btop++ v.1.3.0
 2026/06/13 (21:24:06) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
+
+2026/06/15 (21:32:07) | ===> btop++ v.1.3.0
+2026/06/15 (21:32:07) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
