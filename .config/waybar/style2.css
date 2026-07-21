@@ -65,6 +65,11 @@ tooltip label {
   color: rgb(201, 203, 255);
 
 }
+#window {
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #676d86;
+}
 #mode, #clock, #memory, #temperature,#cpu,#mpd, #idle_inhibitor, #temperature, #backlight, #pulseaudio, #network, #battery, #custom-powermenu, #custom-cava-internal, 
 
 /* cava color*/

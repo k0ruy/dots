@@ -5,7 +5,7 @@ configuration {
 }
 
 // Globals.
-@import "~/.config/rofi/colors/dracula.rasi"
+@import "~/.config/rofi/colors/catppuccin.rasi"
 
 // Main window.
 window {

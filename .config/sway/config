@@ -150,8 +150,8 @@ input "type:keyboard" {
     # gsettings set $gnome-schema icon-theme 'MacTahoe'
 
     exec_always {
-        gsettings set $gnome-schema gtk-theme 'Dracula'
-        gsettings set $gnome-schema icon-theme 'Dracula'
+        gsettings set $gnome-schema gtk-theme 'Catppuccin'
+        gsettings set $gnome-schema icon-theme 'Mint-Y-Sand'
         gsettings set $gnome-schema cursor-theme 'Bibata-Modern-Classic'
         gsettings set $gnome-schema font-name 'Ubuntu regular 11'
     }
@@ -280,12 +280,17 @@ input "type:keyboard" {
     bindsym $mod+d exec --no-startup-id              wezterm -e yazi
     bindsym $mod+n exec --no-startup-id              wezterm -e nvim
     bindsym $mod+w exec --no-startup-id              vivaldi
-    #bindsym $mod+Shift+d exec --no-startup-id        wezterm --hold sh -c "cd /home/ko4/Codelearning/go/src/bilibili_live_tui/  && export TERM=xterm-256color && ./main"
     bindsym $mod+Shift+x exec --no-startup-id        ~/.config/sway/swaylock.sh
-    #bindsym $mod+q exec --no-startup-id              icalingua --enable-features=UseOzonePlatform --ozone-platform=wayland
-    bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/Screenshots/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
-    bindsym $mod+bracketright exec --no-startup-id   grimshot --notify  copy area 
+    bindsym $mod+bracketleft  exec --no-startup-id   ~/.config/sway/grimshot.sh --notify  save area ~/Pictures/Screenshots/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
+    bindsym $mod+bracketright exec --no-startup-id        ~/.config/sway/grimshot.sh --notify  copy area 
     bindsym $mod+a exec --no-startup-id             ~/.config/sway/grimshot_watermark.sh
+
+    # Toggle audio output: green rear (headphones) <-> black rear (Logitech)
+    bindsym $mod+u exec --no-startup-id              ~/scripts/audio-toggle
+    # Force speakers (black rear)
+    bindsym $mod+Shift+u exec --no-startup-id        ~/scripts/audio-toggle speakers
+    # Force headphones (green rear)
+    bindsym $mod+Ctrl+u exec --no-startup-id         ~/scripts/audio-toggle phones
 
 
     # Kill focused window

@@ -13,4 +13,5 @@
     selected:       #79E6F3FF;
     active:         #5ADECDFF;
     urgent:         #F37F97FF;
+    border:         #191C24;
 }
