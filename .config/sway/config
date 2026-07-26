@@ -258,7 +258,19 @@ input "type:keyboard" {
     }
 
     # Main displays
-    output DP-2 pos 0 0 res 2560x1440
+    output DP-1 pos 800 0 res 2560x1440@144Hz
+
+    # 1024 768@43Hz
+    #output DP-2 modeline 43.91  1024 1056 1160 1296  768 769 772 788  -HSync +Vsync    
+    #output DP-2 pos -1024 336
+    
+    # 640 480@72Hz
+    #output DP-2 modeline 29.43  640 664 728 816  480 481 484 501  -HSync +Vsync
+    #output DP-2 pos -640 480
+
+    # 800 600@60
+    output DP-2 modeline 38.22  800 832 912 1024  600 601 604 622  -HSync +Vsync
+    output DP-2 pos 0 420
 
 
 #----------------#
@@ -274,15 +286,15 @@ input "type:keyboard" {
     
 
     # quick start some applications
-    bindsym $mod+m exec --no-startup-id              spotify
+    bindsym $mod+m exec --no-startup-id              flatpak run com.spotify.Client
     bindsym $mod+c exec --no-startup-id              code
     bindsym $mod+b exec --no-startup-id              wezterm -e btop
     bindsym $mod+d exec --no-startup-id              wezterm -e yazi
     bindsym $mod+n exec --no-startup-id              wezterm -e nvim
     bindsym $mod+w exec --no-startup-id              vivaldi
     bindsym $mod+Shift+x exec --no-startup-id        ~/.config/sway/swaylock.sh
-    bindsym $mod+bracketleft  exec --no-startup-id   ~/.config/sway/grimshot.sh --notify  save area ~/Pictures/Screenshots/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
-    bindsym $mod+bracketright exec --no-startup-id        ~/.config/sway/grimshot.sh --notify  copy area 
+    bindsym $mod+bracketleft  exec --no-startup-id   grimshot --notify  save area ~/Pictures/Screenshots/$(date "+%Y-%m-%d"T"%H:%M:%S_no_watermark").png
+    bindsym $mod+bracketright exec --no-startup-id        grimshot --notify  copy area 
     bindsym $mod+a exec --no-startup-id             ~/.config/sway/grimshot_watermark.sh
 
     # Toggle audio output: green rear (headphones) <-> black rear (Logitech)

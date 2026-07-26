@@ -1,9 +1,11 @@
 {
+  "output": ["DP-1"], 
   "modules-left": [
     "custom/launcher",
-    "sway/window",
+    //"sway/window",
     "sway/workspaces",
     "temperature",
+    "cpu",
     "custom/cava-internal",  
     "custom/spotify",
   ],
@@ -12,11 +14,11 @@
   ],
   "modules-right": [
     "pulseaudio",
-    "backlight",
-    "memory",
-    "cpu",
+    //"backlight",
+    //"memory",
+    //"cpu",
     "network",
-    "battery",
+    //"battery",
     "custom/powermenu",
     "tray"
   ],
@@ -34,23 +36,24 @@
   "sway/workspaces": {
     "disable-scroll": true,
   },
-  "sway/window": {
-    "max-length": 60,
-    "min-length": 13,
-    "justify": "left",
-    "format": "{app_id}",
-    "rewrite": {
-      "vivaldi-stable": "Vivaldi",
-      "steamwebhelper": "Steam",
-      "Spotify": "Spotify",
-      "nemo": "Nemo",
-      "xed": "Text Editor",
-      "^org\\.wezfurlong\\.wezterm$": "Wezterm",
-      "^org\\.pwmt\\.zathura$": "Zathura",
-      "^org\\.telegram\\.desktop$": "Telegram",
-      "^com\\.github\\.IsmaelMartinez\\.teams_for_linux$": "Teams"
-    }
-  },
+  //"sway/window": {
+  //  "max-length": 60,
+  //  "min-length": 13,
+  //  "justify": "left",
+  //  "format": "{app_id}",
+  //  "rewrite": {
+  //    "vivaldi-stable": "Vivaldi",
+  //    "steamwebhelper": "Steam",
+  //    "Spotify": "Spotify",
+  //    "nemo": "Nemo",
+  //    "xed": "Text Editor",
+  //    "^org\\.wezfurlong\\.wezterm$": "Wezterm",
+  //    "^com\\.cisco\\.secureclient.\\gui$": "Cisco Secure Client",
+  //    "^org\\.pwmt\\.zathura$": "Zathura",
+  //    "^org\\.telegram\\.desktop$": "Telegram",
+  //    "^com\\.github\\.IsmaelMartinez\\.teams_for_linux$": "Teams"
+  //  }
+  //},
 "custom/spotify": {
     "exec": "/usr/bin/python3 ~/.config/waybar/spotify.py --player spotify",
     "format": "{}",
